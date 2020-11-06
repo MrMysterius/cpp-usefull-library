@@ -121,3 +121,20 @@ string getString(string name, int minLength, int maxLength) {
 
     return input;
 }
+
+//CALCS
+
+double cPow(double base, double exponent) {
+    if (exponent == 0) return 1.0;
+    bool isNegative = exponent < 0 ? true : false;
+
+    double out = base;
+
+    exponent = isNegative ? exponent * -1.0 : exponent;
+
+    for (int i = 0; i < exponent - 1; i++) {
+        out *= base;
+    }
+
+    return isNegative ? (1.0 / out) : out;
+}
