@@ -111,7 +111,7 @@ string getString(string name, int minLength, int maxLength) {
 
         cin.ignore(1000000, '\n');
 
-        if ((minLength == 0 && maxLength == 0) || (input.length >= minLength && (maxLength == 0 || input.length <= maxLength))) {
+        if ((minLength == 0 && maxLength == 0) || (input.length() >= minLength && (maxLength == 0 || input.length() <= maxLength))) {
             isFinished = true;
         }
         else {
